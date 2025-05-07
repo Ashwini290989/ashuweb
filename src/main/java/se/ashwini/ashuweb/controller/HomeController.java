@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class HomeController {
+public class HomeController extends BaseController {
     @Autowired
     private HockeyPlayerRepository hockeyPlayerRepository;
     @GetMapping("/")
@@ -26,7 +26,9 @@ public class HomeController {
         return "home";
     }
     @GetMapping("/profile")
-    public String profile() {
+    public String profile(Model model) {
+        String user = getLoggedInEmail();
+        model.addAttribute("user", user);
         return "profile";
     }
 }

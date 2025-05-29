@@ -25,8 +25,7 @@ public class ConsoleRunner implements CommandLineRunner {
             hockeyPlayer.setName("Dhairya");
             hockeyPlayerRepository.save(hockeyPlayer);
         }
-        //insert into HockeyPlayer
-        //kollaom count(*)=0
+
 
     }
 

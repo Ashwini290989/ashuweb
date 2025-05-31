@@ -10,12 +10,11 @@ phases:
   build:
     commands:
       - echo Build completed on `date`
-      - cd JavaWeb-master
       - mvn clean package -Dmaven.test.skip
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - AshuwebApplication/target/*.jar
+    - target/*.jar
   discard-paths: yes

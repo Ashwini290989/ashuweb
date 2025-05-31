@@ -15,12 +15,7 @@ public class HomeController extends BaseController {
     private HockeyPlayerRepository hockeyPlayerRepository;
     @GetMapping("/")
     public String home(Model model) {
-    //return "home"; // name for html file
-        // get data from database- text with list for hockey player
-       // List<String> players = new ArrayList<>();
-//        players.add("dhairya");
-//        players.add("ash");
-//        players.add("rakesh");
+
         model.addAttribute("players", hockeyPlayerRepository.findAll());
         model.addAttribute("user","dhairya");
         return "home";

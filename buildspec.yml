@@ -4,9 +4,7 @@ phases:
   install:
     runtime-versions:
       java: corretto21
-    commands:
-      - echo installing Maven...
-      - yum install -y maven
+
   build:
     commands:
       - echo Build completed on `date`
